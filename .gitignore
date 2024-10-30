@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+/backend/.env
+/frontend/.env
+
+# Logs
+logs/
+*.log
+
+# IDEs e Editores
+.vscode/
+.idea/
