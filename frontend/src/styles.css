@@ -1,0 +1,18 @@
+:root {
+  /* Cores principais */
+  --primary-color: #ff6a00; /* Laranja */
+  --background-dark: #1e1e1e; /* Fundo escuro */
+  --background-gray: #2e2e2e; /* Cinza escuro para menus e caixas */
+  --text-light: #f5f5f5; /* Texto claro */
+  --accent-color: #4caf50; /* Verde para status aprovados */
+  --warning-color: #e53935; /* Vermelho para status de pendências */
+
+  /* Outros */
+  --button-hover: #ff8a50; /* Tom de laranja mais claro para hover */
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+}

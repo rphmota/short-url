@@ -1,0 +1,30 @@
+<header class="header">
+  <div class="logo">Short</div>
+  <div class="auth-buttons">
+    <button
+      class="btn signin"
+      (click)="goToLogin()"
+      *ngIf="router.url !== '/dashboard'"
+    >
+      Sign In
+    </button>
+    <button
+      class="btn signup"
+      (click)="goToSignup()"
+      *ngIf="router.url !== '/dashboard'"
+    >
+      Sign Up
+    </button>
+    <button
+      class="btn signup"
+      (click)="logout()"
+      *ngIf="router.url === '/dashboard'"
+    >
+      Logout
+    </button>
+  </div>
+</header>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
