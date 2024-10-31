@@ -1,0 +1,146 @@
+.container {
+  background-color: var(--background-gray);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: var(--text-light);
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid var(--text-light);
+  border-radius: 4px;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+.shortened-url {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--background-dark);
+  border-radius: 4px;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.shortened-url h2 {
+  color: var(--text-light);
+}
+
+.dashboard-container {
+  background-color: var(--background-gray);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 2rem auto;
+  color: var(--text-light);
+}
+
+h2 {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--text-light);
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: var(--primary-color);
+  text-align: center;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+td {
+  background-color: var(--background-dark);
+  text-align: center;
+  color: var(--text-light);
+}
+
+td.url-cell {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+.actions button {
+  padding: 0.3rem 0.7rem;
+  margin-right: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+td button + button {
+  margin-left: 1rem;
+}
+
+.actions button:hover {
+  background-color: var(--button-hover);
+}
+
+.no-urls {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+.shortened-url a,
+td a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.shortened-url a:hover,
+td a:hover {
+  text-decoration: underline;
+}

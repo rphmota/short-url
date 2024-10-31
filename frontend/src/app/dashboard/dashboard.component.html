@@ -1,0 +1,66 @@
+<div class="dashboard-container">
+  <h1>Short URL</h1>
+  <input type="text" placeholder="Digite a URL aqui" [(ngModel)]="url" />
+  <button (click)="encurtarUrl()">Short</button>
+
+  <div *ngIf="urlEncurtada" class="shortened-url">
+    <h2>Click on URL</h2>
+    <a [href]="urlEncurtada" target="_blank" rel="noopener noreferrer">
+      {{ urlEncurtada }}
+    </a>
+  </div>
+
+  <h2>URLs Encurtadas</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Original URL</th>
+        <th>Short Code</th>
+        <th>Shortened URL</th>
+        <th>Clicks</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let url of urls">
+        <td class="url-cell">
+          <div *ngIf="editingUrlId === url.id; else displayUrl">
+            <input
+              type="text"
+              [(ngModel)]="editingOriginalUrl"
+              placeholder="Digite a nova URL"
+            />
+          </div>
+          <ng-template #displayUrl>
+            {{ url.original_url }}
+          </ng-template>
+        </td>
+        <td>{{ url.short_code }}</td>
+        <td>
+          <a
+            [href]="generateFullUrl(url.short_code)"
+            target="_blank"
+            rel="noopener noreferrer"
+            (click)="handleLinkClick(url)"
+          >
+            {{ generateFullUrl(url.short_code) }}
+          </a>
+        </td>
+        <td>{{ url.click_count }}</td>
+        <td>
+          <!-- Exibe botões de ação conforme o estado de edição -->
+          <div *ngIf="editingUrlId === url.id; else actionButtons">
+            <button (click)="saveEdit(url.id)">Salvar</button>
+            <button (click)="editingUrlId = null">Cancelar</button>
+          </div>
+          <ng-template #actionButtons>
+            <button (click)="requestEditUrl(url.id, url.original_url)">
+              Editar
+            </button>
+            <button (click)="deleteUrl(url.id)">Apagar</button>
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
