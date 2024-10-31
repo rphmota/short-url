@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Short URL</h1>
+  <input type="text" placeholder="Digite a URL aqui" [(ngModel)]="url" />
+  <button (click)="encurtarUrl()">Short</button>
+
+  <div *ngIf="urlEncurtada" class="shortened-url">
+    <h2>Click on URL</h2>
+    <a [href]="urlEncurtada" target="_blank" rel="noopener noreferrer">{{
+      urlEncurtada
+    }}</a>
+  </div>
+</div>
